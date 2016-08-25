@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DD863D01D6EF324001C04DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD863CF1D6EF324001C04DE /* AppDelegate.swift */; };
+		5DD863D21D6EF324001C04DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD863D11D6EF324001C04DE /* ViewController.swift */; };
+		5DD863D51D6EF325001C04DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD863D31D6EF325001C04DE /* Main.storyboard */; };
+		5DD863D71D6EF325001C04DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD863D61D6EF325001C04DE /* Assets.xcassets */; };
+		5DD863DA1D6EF325001C04DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD863D81D6EF325001C04DE /* LaunchScreen.storyboard */; };
+		5DD863E51D6EF325001C04DE /* SampleRSBarCodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD863E41D6EF325001C04DE /* SampleRSBarCodeScannerTests.swift */; };
+		5DD863F01D6EF325001C04DE /* SampleRSBarCodeScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD863EF1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DD863E11D6EF325001C04DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DD863C41D6EF324001C04DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DD863CB1D6EF324001C04DE;
+			remoteInfo = SampleRSBarCodeScanner;
+		};
+		5DD863EC1D6EF325001C04DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DD863C41D6EF324001C04DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DD863CB1D6EF324001C04DE;
+			remoteInfo = SampleRSBarCodeScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5DD863CC1D6EF324001C04DE /* SampleRSBarCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleRSBarCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD863CF1D6EF324001C04DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DD863D11D6EF324001C04DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DD863D41D6EF325001C04DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DD863D61D6EF325001C04DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DD863D91D6EF325001C04DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DD863DB1D6EF325001C04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DD863E01D6EF325001C04DE /* SampleRSBarCodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleRSBarCodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD863E41D6EF325001C04DE /* SampleRSBarCodeScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRSBarCodeScannerTests.swift; sourceTree = "<group>"; };
+		5DD863E61D6EF325001C04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DD863EB1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleRSBarCodeScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD863EF1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRSBarCodeScannerUITests.swift; sourceTree = "<group>"; };
+		5DD863F11D6EF325001C04DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DD863C91D6EF324001C04DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863DD1D6EF325001C04DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863E81D6EF325001C04DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DD863C31D6EF324001C04DE = {
+			isa = PBXGroup;
+			children = (
+				5DD863CE1D6EF324001C04DE /* SampleRSBarCodeScanner */,
+				5DD863E31D6EF325001C04DE /* SampleRSBarCodeScannerTests */,
+				5DD863EE1D6EF325001C04DE /* SampleRSBarCodeScannerUITests */,
+				5DD863CD1D6EF324001C04DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DD863CD1D6EF324001C04DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DD863CC1D6EF324001C04DE /* SampleRSBarCodeScanner.app */,
+				5DD863E01D6EF325001C04DE /* SampleRSBarCodeScannerTests.xctest */,
+				5DD863EB1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DD863CE1D6EF324001C04DE /* SampleRSBarCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				5DD863CF1D6EF324001C04DE /* AppDelegate.swift */,
+				5DD863D11D6EF324001C04DE /* ViewController.swift */,
+				5DD863D31D6EF325001C04DE /* Main.storyboard */,
+				5DD863D61D6EF325001C04DE /* Assets.xcassets */,
+				5DD863D81D6EF325001C04DE /* LaunchScreen.storyboard */,
+				5DD863DB1D6EF325001C04DE /* Info.plist */,
+			);
+			path = SampleRSBarCodeScanner;
+			sourceTree = "<group>";
+		};
+		5DD863E31D6EF325001C04DE /* SampleRSBarCodeScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DD863E41D6EF325001C04DE /* SampleRSBarCodeScannerTests.swift */,
+				5DD863E61D6EF325001C04DE /* Info.plist */,
+			);
+			path = SampleRSBarCodeScannerTests;
+			sourceTree = "<group>";
+		};
+		5DD863EE1D6EF325001C04DE /* SampleRSBarCodeScannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DD863EF1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.swift */,
+				5DD863F11D6EF325001C04DE /* Info.plist */,
+			);
+			path = SampleRSBarCodeScannerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DD863CB1D6EF324001C04DE /* SampleRSBarCodeScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DD863F41D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScanner" */;
+			buildPhases = (
+				5DD863C81D6EF324001C04DE /* Sources */,
+				5DD863C91D6EF324001C04DE /* Frameworks */,
+				5DD863CA1D6EF324001C04DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleRSBarCodeScanner;
+			productName = SampleRSBarCodeScanner;
+			productReference = 5DD863CC1D6EF324001C04DE /* SampleRSBarCodeScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DD863DF1D6EF325001C04DE /* SampleRSBarCodeScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DD863F71D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScannerTests" */;
+			buildPhases = (
+				5DD863DC1D6EF325001C04DE /* Sources */,
+				5DD863DD1D6EF325001C04DE /* Frameworks */,
+				5DD863DE1D6EF325001C04DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DD863E21D6EF325001C04DE /* PBXTargetDependency */,
+			);
+			name = SampleRSBarCodeScannerTests;
+			productName = SampleRSBarCodeScannerTests;
+			productReference = 5DD863E01D6EF325001C04DE /* SampleRSBarCodeScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DD863EA1D6EF325001C04DE /* SampleRSBarCodeScannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DD863FA1D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScannerUITests" */;
+			buildPhases = (
+				5DD863E71D6EF325001C04DE /* Sources */,
+				5DD863E81D6EF325001C04DE /* Frameworks */,
+				5DD863E91D6EF325001C04DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DD863ED1D6EF325001C04DE /* PBXTargetDependency */,
+			);
+			name = SampleRSBarCodeScannerUITests;
+			productName = SampleRSBarCodeScannerUITests;
+			productReference = 5DD863EB1D6EF325001C04DE /* SampleRSBarCodeScannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DD863C41D6EF324001C04DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alvin George";
+				TargetAttributes = {
+					5DD863CB1D6EF324001C04DE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5DD863DF1D6EF325001C04DE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5DD863CB1D6EF324001C04DE;
+					};
+					5DD863EA1D6EF325001C04DE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5DD863CB1D6EF324001C04DE;
+					};
+				};
+			};
+			buildConfigurationList = 5DD863C71D6EF324001C04DE /* Build configuration list for PBXProject "SampleRSBarCodeScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DD863C31D6EF324001C04DE;
+			productRefGroup = 5DD863CD1D6EF324001C04DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DD863CB1D6EF324001C04DE /* SampleRSBarCodeScanner */,
+				5DD863DF1D6EF325001C04DE /* SampleRSBarCodeScannerTests */,
+				5DD863EA1D6EF325001C04DE /* SampleRSBarCodeScannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DD863CA1D6EF324001C04DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD863DA1D6EF325001C04DE /* LaunchScreen.storyboard in Resources */,
+				5DD863D71D6EF325001C04DE /* Assets.xcassets in Resources */,
+				5DD863D51D6EF325001C04DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863DE1D6EF325001C04DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863E91D6EF325001C04DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DD863C81D6EF324001C04DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD863D21D6EF324001C04DE /* ViewController.swift in Sources */,
+				5DD863D01D6EF324001C04DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863DC1D6EF325001C04DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD863E51D6EF325001C04DE /* SampleRSBarCodeScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DD863E71D6EF325001C04DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD863F01D6EF325001C04DE /* SampleRSBarCodeScannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DD863E21D6EF325001C04DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DD863CB1D6EF324001C04DE /* SampleRSBarCodeScanner */;
+			targetProxy = 5DD863E11D6EF325001C04DE /* PBXContainerItemProxy */;
+		};
+		5DD863ED1D6EF325001C04DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DD863CB1D6EF324001C04DE /* SampleRSBarCodeScanner */;
+			targetProxy = 5DD863EC1D6EF325001C04DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DD863D31D6EF325001C04DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DD863D41D6EF325001C04DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DD863D81D6EF325001C04DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DD863D91D6EF325001C04DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DD863F21D6EF325001C04DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DD863F31D6EF325001C04DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DD863F51D6EF325001C04DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleRSBarCodeScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DD863F61D6EF325001C04DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SampleRSBarCodeScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5DD863F81D6EF325001C04DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SampleRSBarCodeScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleRSBarCodeScanner.app/SampleRSBarCodeScanner";
+			};
+			name = Debug;
+		};
+		5DD863F91D6EF325001C04DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SampleRSBarCodeScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleRSBarCodeScanner.app/SampleRSBarCodeScanner";
+			};
+			name = Release;
+		};
+		5DD863FB1D6EF325001C04DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SampleRSBarCodeScannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SampleRSBarCodeScanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5DD863FC1D6EF325001C04DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SampleRSBarCodeScannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.SampleRSBarCodeScannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SampleRSBarCodeScanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DD863C71D6EF324001C04DE /* Build configuration list for PBXProject "SampleRSBarCodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DD863F21D6EF325001C04DE /* Debug */,
+				5DD863F31D6EF325001C04DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DD863F41D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DD863F51D6EF325001C04DE /* Debug */,
+				5DD863F61D6EF325001C04DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DD863F71D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DD863F81D6EF325001C04DE /* Debug */,
+				5DD863F91D6EF325001C04DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DD863FA1D6EF325001C04DE /* Build configuration list for PBXNativeTarget "SampleRSBarCodeScannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DD863FB1D6EF325001C04DE /* Debug */,
+				5DD863FC1D6EF325001C04DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DD863C41D6EF324001C04DE /* Project object */;
+}
