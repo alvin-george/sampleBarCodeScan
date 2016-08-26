@@ -72,7 +72,6 @@ class ViewController: RSCodeReaderViewController  {
         //We can remove some bar types if needed:
         //types.removeObject(AVMetadataObjectTypeQRCode)
 
-
         self.output.metadataObjectTypes = NSArray(array: types) as [AnyObject]
 
         // MARK: NOTE: If you layout views in storyboard, you should add these 3 lines
@@ -104,6 +103,7 @@ class ViewController: RSCodeReaderViewController  {
     func showBarCodeAndCorrespondingImage()
     {
         let gen = RSUnifiedCodeGenerator.shared
+        
         gen.fillColor = UIColor.whiteColor()
         gen.strokeColor = UIColor.blackColor()
 
@@ -148,7 +148,8 @@ class ViewController: RSCodeReaderViewController  {
             barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeDataMatrixCode)
             break;
         case "org.iso.Aztec":
-            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeAztecCode)
+            print("self.contents : \(self.contents)")
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeFace)
             break;
         case "org.iso.PDF417":
             barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypePDF417Code)
@@ -159,7 +160,6 @@ class ViewController: RSCodeReaderViewController  {
         case "com.intermec.Code93":
             barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeCode93Code)
             break;
-
         default:
             break
         }

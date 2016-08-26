@@ -44,7 +44,7 @@ public class RSUnifiedCodeValidator {
             codeGenerator = RSCode128Generator()
         case AVMetadataObjectTypeDataMatrixCode:
             codeGenerator = RSCodeDataMatrixGenerator()
-        case RSBarcodesTypeISBN13Code:
+          case RSBarcodesTypeISBN13Code:
             codeGenerator = RSISBN13Generator()
         case RSBarcodesTypeISSN13Code:
             codeGenerator = RSISSN13Generator()

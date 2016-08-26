@@ -63,6 +63,8 @@ public class RSUnifiedCodeGenerator: RSCodeGenerator {
             codeGenerator = RSISSN13Generator()
         case RSBarcodesTypeExtendedCode39Code:
             codeGenerator = RSExtendedCode39Generator()
+        case AVMetadataObjectTypeFace:
+            return RSAbstractCodeGenerator.generateCode(contents, inputCorrectionLevel: inputCorrectionLevel, filterName: RSAbstractCodeGenerator.filterName(machineReadableCodeObjectType))
         default:
             print("No code generator selected.")
         }
@@ -77,7 +79,7 @@ public class RSUnifiedCodeGenerator: RSCodeGenerator {
     }
     
     public func generateCode(contents: String, machineReadableCodeObjectType: String) -> UIImage? {
-        return self.generateCode(contents, inputCorrectionLevel: .Medium, machineReadableCodeObjectType: machineReadableCodeObjectType)
+        return self.generateCode(contents, inputCorrectionLevel: InputCorrectionLevel.High, machineReadableCodeObjectType: machineReadableCodeObjectType)
     }
     
     public func generateCode(machineReadableCodeObject: AVMetadataMachineReadableCodeObject, inputCorrectionLevel: InputCorrectionLevel) -> UIImage? {

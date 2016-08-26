@@ -166,6 +166,8 @@ public class RSAbstractCodeGenerator : RSCodeGenerator {
             return "CIAztecCodeGenerator"
         } else if machineReadableCodeObjectType == AVMetadataObjectTypeCode128Code {
             return "CICode128BarcodeGenerator"
+        }else if machineReadableCodeObjectType == AVMetadataObjectTypeFace {
+            return "CIFaceBarcodeGenerator"
         } else {
             return ""
         }
@@ -175,19 +177,25 @@ public class RSAbstractCodeGenerator : RSCodeGenerator {
     public class func generateCode(contents:String, inputCorrectionLevel: InputCorrectionLevel, filterName:String) -> UIImage? {
         if filterName.length() > 0 {
             let filter = CIFilter(name: filterName)
+
             if let filter = filter {
                 filter.setDefaults()
                 let inputMessage = contents.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                 filter.setValue(inputMessage, forKey: "inputMessage")
                 filter.setValue(inputCorrectionLevel.rawValue, forKey: "inputCorrectionLevel")
-                
+
+
                 let outputImage = filter.outputImage
-                let context = CIContext(options: nil)
+                let context = CIContext(options: .None)
+
                 if let outputImage = outputImage {
                     let cgImage = context.createCGImage(outputImage, fromRect: outputImage.extent)
                     return UIImage(CGImage: cgImage, scale: 1, orientation: UIImageOrientation.Up)
+
                 }
             }
+
+
         }
         return nil
     }
