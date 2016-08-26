@@ -11,7 +11,7 @@ import UIKit
 import AVFoundation
 
 public class RSUnifiedCodeGenerator: RSCodeGenerator {
-    
+
     public var isBuiltInCode128GeneratorSelected = false
     public var fillColor: UIColor = UIColor.whiteColor()
     public var strokeColor: UIColor = UIColor.blackColor()
@@ -87,6 +87,7 @@ public class RSUnifiedCodeGenerator: RSCodeGenerator {
     public func generateCode(machineReadableCodeObject: AVMetadataMachineReadableCodeObject) -> UIImage? {
         return self.generateCode(machineReadableCodeObject, inputCorrectionLevel: .Medium)
     }
+
 }
 
 let UnifiedCodeGeneratorSharedInstance = RSUnifiedCodeGenerator()

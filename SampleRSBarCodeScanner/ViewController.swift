@@ -8,14 +8,15 @@
 
 import UIKit
 import AVFoundation
-import RSBarcodes
 
 
 class ViewController: RSCodeReaderViewController  {
 
     var barcode: String = ""
+    var barcodeTypeString:String = ""
     var dispatched: Bool = false
     var contents: String = "http://www.zai360.com/"
+    var barcodeTypeImage: UIImage?
 
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var showBarCodeButton: UIButton!
@@ -23,6 +24,7 @@ class ViewController: RSCodeReaderViewController  {
     @IBOutlet weak var cameraOrientationButton: UIButton!
     @IBOutlet weak var imageDisplayed: UIImageView!
     @IBOutlet weak var barCodeLabel: UILabel!
+    @IBOutlet weak var barCodeTypeLabel: UILabel!
 
     @IBAction func switchCamera(sender: AnyObject?) {
         let position = self.switchCamera()
@@ -46,6 +48,7 @@ class ViewController: RSCodeReaderViewController  {
         // Do any additional setup after loading the view, typically from a nib.
         self.barCodeLabel.hidden =  true
         self.imageDisplayed.hidden =  true
+        self.barCodeTypeLabel.hidden =  true
 
     }
 
@@ -65,7 +68,11 @@ class ViewController: RSCodeReaderViewController  {
         }
 
         let types = NSMutableArray(array: self.output.availableMetadataObjectTypes)
-        types.removeObject(AVMetadataObjectTypeQRCode)
+     
+        //We can remove some bar types if needed:
+        //types.removeObject(AVMetadataObjectTypeQRCode)
+
+
         self.output.metadataObjectTypes = NSArray(array: types) as [AnyObject]
 
         // MARK: NOTE: If you layout views in storyboard, you should add these 3 lines
@@ -83,9 +90,10 @@ class ViewController: RSCodeReaderViewController  {
                 for barcode in barcodes {
                     self.barcode = barcode.stringValue
                     print("Barcode found: type=" + barcode.type + " value=" + barcode.stringValue)
-                    AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    self.barcodeTypeString = barcode.type
                     dispatch_async(dispatch_get_main_queue(), {
                         // MARK: NOTE: Perform UI related actions here.
+                        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
                         self.showBarCodeAndCorrespondingImage()
 
                     })
@@ -98,19 +106,77 @@ class ViewController: RSCodeReaderViewController  {
         let gen = RSUnifiedCodeGenerator.shared
         gen.fillColor = UIColor.whiteColor()
         gen.strokeColor = UIColor.blackColor()
+
+        self.contents = self.barcode
         print ("generating image with barcode: " + self.contents)
 
-        let image: UIImage? = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeQRCode)
+        switch (barcodeTypeString) {
 
-        if (image != nil) {
+        case "org.ansi.Interleaved2of5":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeInterleaved2of5Code)!
+            break;
+        case "org.gs1.ITF14":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeITF14Code)!
+            break;
+        case "org.gs1.EAN-13":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeEAN13Code)!
+            break;
+        case "org.gs1.EAN-8":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeEAN8Code)
+            break;
+
+        case "org.gs1.UPC-A":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeUPCECode)
+            break;
+
+        case "org.gs1.UPC-E":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeUPCECode)
+            break;
+
+        case "org.iso.Code39":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeCode39Code)
+            break;
+
+
+        case "org.iso.Code128":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeCode128Code)
+            break;
+        case "org.iso.Code39Mod43":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeCode39Mod43Code)
+            break;
+        case "org.iso.DataMatrix":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeDataMatrixCode)
+            break;
+        case "org.iso.Aztec":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeAztecCode)
+            break;
+        case "org.iso.PDF417":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypePDF417Code)
+            break;
+        case "org.iso.QRCode":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeQRCode)
+            break;
+        case "com.intermec.Code93":
+            barcodeTypeImage = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeCode93Code)
+            break;
+
+        default:
+            break
+        }
+
+        //let image: UIImage? = gen.generateCode(self.contents, machineReadableCodeObjectType: AVMetadataObjectTypeQRCode)
+
+        if (barcodeTypeImage != nil) {
             self.imageDisplayed.layer.borderWidth = 1
-            self.imageDisplayed.image = RSAbstractCodeGenerator.resizeImage(image!, targetSize: self.imageDisplayed.bounds.size, contentMode: UIViewContentMode.BottomRight)
+            self.imageDisplayed.image = RSAbstractCodeGenerator.resizeImage(barcodeTypeImage!, targetSize: self.imageDisplayed.bounds.size, contentMode: UIViewContentMode.ScaleAspectFit)
         }
         print("barcode: \(barcode)")
         self.barCodeLabel.text = self.barcode
+        self.barCodeTypeLabel.text = self.barcodeTypeString
 
         self.barCodeLabel.hidden =  false
         self.imageDisplayed.hidden =  false
+        self.barCodeTypeLabel.hidden =  false
         self.viewWillAppear(true)
 
     }
